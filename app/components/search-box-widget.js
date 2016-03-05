@@ -1,7 +1,7 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
-    index: Ember.inject.controller,
+    // index: Ember.inject.controller,
     searchText: '',
     actions: {
         searchMovies() {
@@ -13,7 +13,7 @@ export default Ember.Component.extend({
                 console.log(data);
                 // TODO: transition to the movie list page, how to pass the data?
                 // transitionTo inside component is not allowed 
-                self.get('index').transitionTo('movie-list')
+                // self.get('index').transitionTo('movie-list')
             })
         }
     }

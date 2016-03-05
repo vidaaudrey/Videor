@@ -1,2 +1,48 @@
-<h2>Movie Detail Index Page</h2>
-{{outlet}}
+<div class="row">
+    <div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2 movie-item">       
+        <div class="row movie-item-header">
+            <div class="thumbnail clearfix">
+                <div class="col-sm-6 col-md-4">
+                    <a href="#"><img src={{posterUrlHelper model.poster_path}} alt={{model.title}}></a>
+                </div>
+                <div class="col-sm-6 col-md-8 caption">
+                    <a class="movie-title" href={{model.homepage}}><h4>{{model.title}}</h4></a>
+                    <div class="start-rating">
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star-empty"></span>
+                    </div>
+                    <div class="genre-link-item">
+                        <a href="#" title="">Comedy</a> / <a href="#" title="">Fiction</a>
+                    </div>
+                    <div class="movie-short-intro">
+                        <p>
+                            {{model.tagline}}
+                        </p>
+                    </div>
+               
+                    <div class="like-buttons">
+                        <a href="#" class="btn btn-success">Edit</a>
+                    </div>
+                   
+                </div>
+            </div>
+        </div>
+        <!-- 'MovieItemBody' Component -->
+        <div class="movie-item-body">
+            <div class="row movie-item-intro">
+                <h3>Introduction</h3>
+                <p>
+                    {{model.overview}}
+                    
+                </p>
+            </div>
+            <div class="row movie-item-video">
+                <h3>Trailer</h3>
+                <iframe width="100%" height="315" src={{youtubeUrlHelper model.videos}} frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+</div>

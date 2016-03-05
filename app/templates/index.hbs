@@ -2,7 +2,13 @@
     <h1> Search Movies</h1>
     <br/><br/>
     <p>Search thousands of movies</p>
-    {{search-box-widget}}
+    {{!-- {{search-box-widget}} --}}
+    <form class="search-box-widget  form-inline" role="search">
+        <div class="form-group">
+            {{input type="text" value=searchText placeholder="search movies..." autofocus="autofocus" class="form-control search-box"}}
+        </div>
+        <button type="submit" class="btn btn-primary" {{action 'searchMovies'}}>Search</button>
+    </form>
     <br/><br/>
 </div>
 {{outlet}}
