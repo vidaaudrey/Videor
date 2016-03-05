@@ -6,11 +6,13 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-  this.route('movie-list');
+  this.route('movie-list', {path: 'movies'}, function(){
+    this.route('popular', {path: '/:category'})
+  });
   this.route('about');
   this.route('movie', function(){
-    this.route('movie-detail', {path:'/:id'}),
-    this.route('movie-list', {path: '/list'})
+    this.route('index', {path: '/:id'}),
+    this.route('new')
   })
 });
 

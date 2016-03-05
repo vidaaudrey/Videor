@@ -1,0 +1,5 @@
+{{#each model as |movie|}}
+  {{movie-item-widget id=movie.id title=movie.title overview=movie.overview posterPath=movie.poster_path }}
+{{else}}
+  <h3>There is no movie.</h3>
+{{/each}}
