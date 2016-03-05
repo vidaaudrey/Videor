@@ -1,7 +1,6 @@
 <h2>Movie List</h2>
 {{#each model as |movie|}}
-  <h3>{{movie.title}}</h3>
-  <p>{{movie.overview}}</p>
+  {{movie-item-widget title=movie.title overview=movie.overview posterPath=movie.poster_path}}
 {{else}}
   <h3>There is no movie.</h3>
 {{/each}}
