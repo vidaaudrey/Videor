@@ -12,6 +12,6 @@ export default Ember.Component.extend({
         var email = this.get('email').toLowerCase(),
             size = this.get('size');
 
-        return 'http://www.gravatar.com/avatar/' + md5(email) + '?s=' + size;
+        return `http://www.gravatar.com/avatar/${md5(email)}'?s=${size}`;
       })
 });

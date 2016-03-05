@@ -8,6 +8,6 @@ export default Ember.Component.extend({
     posterPath:'',
     posterUrl: Ember.computed('posterPath', function(){
         console.log('----',TMDB_IMAGEP_PATH + this.get('posterPath') )
-        return TMDB_IMAGEP_PATH + this.get('posterPath');
+        return `${TMDB_IMAGEP_PATH}${this.get('posterPath')}`;
     })
 });
