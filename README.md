@@ -1,7 +1,9 @@
 # Viedor
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+
+## Question
+- How to reuse a portion of the data (e.g.movie-list and movie detail share part of the data, reuse will make it faster. )
+
 
 ## Prerequisites
 
