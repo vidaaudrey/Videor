@@ -10,9 +10,8 @@ export default Ember.Controller.extend({
            var self = this;
            Ember.$.getJSON(url).then(function(data){
                console.log(data);
-               // TODO: transition to the movie list page, how to pass the data?
-               // transitionTo inside component is not allowed 
-               self.transitionToRoute('movie-list?query=' + self.get('searchText'));
+               // transitionTo inside component is not allowed, must do it in the controller, route or view
+               self.transitionToRoute('movie-list', {queryParams: {query: self.get('searchText'), category: null}});  // TODO: somehow the browser can't forget the query params, have to manually set to null
            })
        }
    }

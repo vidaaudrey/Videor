@@ -1,14 +1,22 @@
 <div class="jumbotron text-center">
-    <h1> Search Movies</h1>
+    <h1> Search thousands of movies</h1>
     <br/><br/>
-    <p>Search thousands of movies</p>
     {{!-- {{search-box-widget}} --}}
+    <div class="explore-links">
+        <ul class="list-inline">
+            <li>{{#link-to "movie-list" (query-params category="popular" query=null)}}Popular{{/link-to}}</li>
+            <li>{{#link-to "movie-list" (query-params category="now_playing" query=null)}}Now Playing{{/link-to}}</li>
+            <li>{{#link-to "movie-list" (query-params category="top_rated" query=null)}}Top Rated{{/link-to}}</li>
+            <li>{{#link-to "movie-list" (query-params category="upcoming" query=null)}}Upcoming{{/link-to}}</li>
+        </ul>
+    </div>
     <form class="search-box-widget  form-inline" role="search">
         <div class="form-group">
             {{input type="text" value=searchText placeholder="search movies..." autofocus="autofocus" class="form-control search-box"}}
         </div>
         <button type="submit" class="btn btn-primary" {{action 'searchMovies'}}>Search</button>
     </form>
+
     <br/><br/>
 </div>
 {{outlet}}
