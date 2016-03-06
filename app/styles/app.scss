@@ -33,9 +33,67 @@ $google-color: #c23321;
 $roboto: 'Roboto',sans-serif;
 $roboto-slab: 'Roboto Slab',serif;
 
-body {
-  padding-top: 0;
+html {
+    font-size: 14px;
+    position: relative;
+    min-height: 100%;
 }
+
+body {
+    margin: 0;
+    margin-bottom: 82px;
+    font-family: $roboto;
+}
+
+main {
+    margin: 60px auto;
+    min-height: 500px;
+}
+
+footer {
+    height: 50px;
+    width: 100%;
+    padding: 16px 0;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-color: $black-base;
+    color: $gray-light;
+    a{
+        display: inline-block;
+        padding: 0 6px;
+        .fa{
+            font-size:20px;
+        }
+    }
+}
+.jumbotron-home{
+    position: absolute;
+    z-index:-1;
+    // reset all 
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 0;
+    margin:0;
+    padding-top:100px;
+    background: url(/assets/bg.jpg) no-repeat center center fixed; 
+    // background: url(http://www.icrt.com.tw/wordpress/wp-content/uploads/2014/05/transcendence2.jpg) no-repeat center center fixed; 
+    background-size: cover;
+    color: $white-base;
+    .explore-links{
+        ul{
+            li{
+                a{
+                    color: $white-base;
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+}
+
 .navbar{
     .navbar-header{
     }
