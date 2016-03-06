@@ -5,6 +5,7 @@ export default Ember.Controller.extend({
      category: null,
      query:null,
      page: 1, 
+     // give the page a friendly title
      pageTitle: Ember.computed('query', 'category', function(){
         if(this.get('query')){
             return `Search results for "${this.get('query')}"`
