@@ -46,3 +46,30 @@ body {
         min-width: 250px;
     }
 }
+.movie-list-item{
+    .caption{
+        min-height:150px;
+        .truncate-multiline--button, .truncate-multiline--button-hidden {
+            background-color: transparent;
+            border: none;
+            color: $brand-info;
+            line-height: 100%;
+            font-style: italic;
+        }
+    }
+}
+.flex-row-wrap {
+    display: flex;
+    flex-flow: row wrap;
+}
+.vertical-align {
+    display: flex;
+    flex-direction: row;
+}
+
+.vertical-align > [class^="col-"],
+.vertical-align > [class*=" col-"] {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
