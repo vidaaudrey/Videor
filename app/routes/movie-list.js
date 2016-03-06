@@ -1,5 +1,5 @@
 import Ember from 'ember';
-const TMDB_BASEURL = 'https://api.themoviedb.org/3/'
+const TMDB_BASEURL = '//api.themoviedb.org/3/'
 const TMDB_KEY = '87380c54ae472259aade42db22a24d89'
 export default Ember.Route.extend({
     model: function(params){
