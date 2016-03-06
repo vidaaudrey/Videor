@@ -20,9 +20,13 @@ export default Ember.Route.extend({
         if(params.query){
             urlPartial = `search/movie?query=${params.query}&`
         }
+        
+        // support pagination
+        urlPartial += params.page ?  `&page=${params.page}` : ''
         console.log('will query', urlPartial);
-         return Ember.$.getJSON(`${TMDB_BASEURL}${urlPartial}api_key=${TMDB_KEY}`).then(function(data) {
+         return Ember.$.getJSON(`${TMDB_BASEURL}${urlPartial}&api_key=${TMDB_KEY}`).then(function(data) {
            return data.results.map(function(movie){
+                console.log('finished query', movie);
               return Ember.Object.create(movie);
             } );
         });

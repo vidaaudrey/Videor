@@ -1,0 +1,12 @@
+
+<div class="pagination-widget">
+    <ul class="pagination pagination-lg">
+        <li><a href="#">&laquo;</a></li>
+        {{#each (rangeHelper 1 10) as |item|}}
+            <li>
+                {{#link-to "movie-list" (query-params category=category query=query page=item)}}{{item}}{{/link-to}}
+            </li>
+        {{/each}}
+        <li><a href="#">&raquo;</a></li>
+    </ul>
+</div>

@@ -1,5 +1,16 @@
 # Viedor
+Viedor is a simple movie app build with Ember 2.4.1.
+[Demo](https://viedor.firebaseapp.com)
 
+## Todo
+- [ ] Pagination
+- [ ] Filter Movies
+- [ ] Save movielist to LocalStorage
+- [ ] Edit Movie
+- [ ] Login with Facebook
+- [ ] Save movielist to firebase
+- [ ] MovieRatingWidget
+- [ ] Refactor to use Ember Data 
 
 ## Question
 - How to reuse a portion of the data (e.g.movie-list and movie detail share part of the data, reuse will make it faster. )
